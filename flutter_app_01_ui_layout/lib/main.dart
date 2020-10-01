@@ -35,9 +35,10 @@ class MyApp extends StatelessWidget {
             height: 100.0,
             width: 100.0,
             decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: Colors.amber,
-                border: Border.all(color: Colors.black, width: 3)),
+              shape: BoxShape.rectangle,
+              color: Colors.amber,
+              border: Border.all(color: Colors.black, width: 3),
+            ),
             child: Center(
               child: Text("Container 1"),
             ),
@@ -60,7 +61,6 @@ class MyApp extends StatelessWidget {
       );
 
   Widget buildColumnTwo() => Column(
-        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Expanded(
             flex: 1,
@@ -105,11 +105,29 @@ class MyApp extends StatelessWidget {
         children: [
           Expanded(
             flex: 2,
-            child: Text("Container 5"),
+            child: Container(
+              height: 100.0,
+              width: 100.0,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.black,
+                border: Border.all(color: Colors.white, width: 3),
+              ),
+              child: Center(
+                child: Text(
+                  "Container 5",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
           ),
           Expanded(
             flex: 1,
-            child: Text("Con 6"),
+            child: Container(
+              height: 100.0,
+              width: 100.0,
+              child: Text("Con 6", style: TextStyle(fontSize: 30)),
+            ),
           ),
         ],
       );
