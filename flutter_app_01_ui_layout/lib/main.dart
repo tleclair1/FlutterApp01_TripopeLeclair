@@ -12,10 +12,36 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.blueGrey,
         appBar: AppBar(
-          title: Text("UI Layout"),
+          title: Text("Row and Column Widgets"),
           backgroundColor: Colors.blue,
         ),
-        body: Column(),
+        body: Row(
+          children: [
+            Column(
+              children: [
+                Container(
+                  height: 100.0,
+                  width: 100.0,
+                  decoration: BoxDecoration(),
+                ),
+                Transform.rotate(
+                  angle: 0,
+                  child: Container(
+                    height: 100.0,
+                    width: 100.0,
+                    decoration: BoxDecoration(),
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: [],
+            ),
+            Column(
+              children: [],
+            ),
+          ],
+        ),
       ),
     );
   }
