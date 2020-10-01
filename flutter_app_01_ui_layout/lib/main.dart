@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             buildColumnOne(),
             buildColumnTwo(),
@@ -31,16 +34,26 @@ class MyApp extends StatelessWidget {
           Container(
             height: 100.0,
             width: 100.0,
-            decoration: BoxDecoration(),
-            child: Text("Container 1"),
+            decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: Colors.amber,
+                border: Border.all(color: Colors.black, width: 3)),
+            child: Center(
+              child: Text("Container 1"),
+            ),
           ),
           Transform.rotate(
-            angle: 0,
+            angle: pi / 4,
             child: Container(
               height: 100.0,
               width: 100.0,
-              decoration: BoxDecoration(),
-              child: Text("Container 2"),
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: Colors.white,
+              ),
+              child: Center(
+                child: Text("Container 2"),
+              ),
             ),
           ),
         ],
@@ -63,11 +76,11 @@ class MyApp extends StatelessWidget {
         children: [
           Expanded(
             flex: 1,
-            child: Text("Container 3"),
+            child: Text("Container 5"),
           ),
           Expanded(
             flex: 1,
-            child: Text("Container 4"),
+            child: Text("Con 6"),
           ),
         ],
       );
