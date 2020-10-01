@@ -17,32 +17,58 @@ class MyApp extends StatelessWidget {
         ),
         body: Row(
           children: [
-            Column(
-              children: [
-                Container(
-                  height: 100.0,
-                  width: 100.0,
-                  decoration: BoxDecoration(),
-                ),
-                Transform.rotate(
-                  angle: 0,
-                  child: Container(
-                    height: 100.0,
-                    width: 100.0,
-                    decoration: BoxDecoration(),
-                  ),
-                ),
-              ],
-            ),
-            Column(
-              children: [],
-            ),
-            Column(
-              children: [],
-            ),
+            buildColumnOne(),
+            buildColumnTwo(),
+            buildColumnThree(),
           ],
         ),
       ),
     );
   }
+
+  Widget buildColumnOne() => Column(
+        children: [
+          Container(
+            height: 100.0,
+            width: 100.0,
+            decoration: BoxDecoration(),
+            child: Text("Container 1"),
+          ),
+          Transform.rotate(
+            angle: 0,
+            child: Container(
+              height: 100.0,
+              width: 100.0,
+              decoration: BoxDecoration(),
+              child: Text("Container 2"),
+            ),
+          ),
+        ],
+      );
+
+  Widget buildColumnTwo() => Column(
+        children: [
+          Expanded(
+            flex: 1,
+            child: Text("Container 3"),
+          ),
+          Expanded(
+            flex: 1,
+            child: Text("Container 4"),
+          ),
+        ],
+      );
+
+  Widget buildColumnThree() => Column(
+        children: [
+          Expanded(
+            flex: 1,
+            child: Text("Container 3"),
+          ),
+          Expanded(
+            flex: 1,
+            child: Text("Container 4"),
+          ),
+        ],
+      );
 }
