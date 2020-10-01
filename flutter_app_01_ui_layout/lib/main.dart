@@ -60,14 +60,43 @@ class MyApp extends StatelessWidget {
       );
 
   Widget buildColumnTwo() => Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Expanded(
             flex: 1,
-            child: Text("Container 3"),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                height: 100.0,
+                width: 100.0,
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  color: Colors.yellow,
+                ),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text("Container 3"),
+                ),
+              ),
+            ),
           ),
           Expanded(
             flex: 1,
-            child: Text("Container 4"),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                height: 100.0,
+                width: 100.0,
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  color: Colors.blue,
+                ),
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: Text("Container 4"),
+                ),
+              ),
+            ),
           ),
         ],
       );
@@ -75,7 +104,7 @@ class MyApp extends StatelessWidget {
   Widget buildColumnThree() => Column(
         children: [
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Text("Container 5"),
           ),
           Expanded(
