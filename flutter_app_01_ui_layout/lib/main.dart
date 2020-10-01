@@ -126,6 +126,10 @@ class MyApp extends StatelessWidget {
             child: Container(
               height: 100.0,
               width: 100.0,
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: Colors.red,
+              ),
               child: Text("Con 6", style: TextStyle(fontSize: 30)),
             ),
           ),
